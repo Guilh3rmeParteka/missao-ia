@@ -5,46 +5,46 @@ const caixaResultado = document.querySelector(".caixa-resultado");
 const textoResultado = document.querySelector(".texto-resultado");
 const perguntas = [
     {
-        enunciado: "O cyberbullying é a violência virtual que ocorre geralmente com as pessoas tímidas e indefesas, ou simplesmente por não caírem na simpatia das mesmas. Como podemos evitá-lo",
+        enunciado: "Qual medida você considera mais importante para melhorar a saúde pública da sua comunidade?",
         alternativas: [
             {
-                texto: "Utilizando palestras para prevenir o cyberbullying nas escolas.",
-                afirmacao: "Você é uma pessoa reflexiva e busca aprendizado e conhecimento."
+                texto: "Investir em campanhas de vacinação, prevenção de doenças e educação em saúde. Acredito que prevenir problemas de saúde é melhor do que esperar as pessoas adoecerem para procurar atendimento",
+                afirmacao: "Pessoa preocupada com a prevenção"
             },
             {
-                texto:  "Prestando atenção aos sinais de cyberbullying nas escolas.",
-                afirmacao: "Você é uma pessoa observadora, pois se preocupa com o bem estar dos seus alunos."
+                texto:  "Ampliar e melhorar os postos de saúde e hospitais, reduzindo o tempo de espera e garantindo atendimento de qualidade para todos. Muitas pessoas precisam de atendimento rápido e não conseguem acesso quando necessitam.",
+                afirmacao: "Pessoa preocupada com o acesso ao atendimento"
             }    
            
         ]
     },
     {
        
-            enunciado: "As fontes renováveis de energia são aquelas formas de produção de energia em que suas fontes são capazes de manter-se disponíveis durante um longo prazo, contando com recursos que se regeneram ou que se mantêm ativos permanentemente. Com base nisso, temos a energia geotérmica, que consiste em utilizar o calor manifestado em áreas próximas à superfície. Qual a sua opinião sobre esse modelo de energia renovável?",
+            enunciado: "Qual deveria ser a principal prioridade do governo para melhorar a saúde pública?",
             alternativas: [
                 {
-                    texto: "A energia geotérmica precisa ser mais explorada visto que utiliza o calor interno da terra, pois não depende do clima e é inesgotável.",
-                    afirmacao: "Você demonstra um perfil  de pesquisador e inovador que busca por meio da inovação soluções para o meio ambiente e sustentabilidade das gerações posteriores."
+                    texto: "“Investir mais em campanhas de prevenção e educação em saúde nas escolas, para que os jovens aprendam desde cedo sobre alimentação saudável, vacinação e prevenção de doenças.",
+                    afirmacao: "Jovem estudante"
                 },
                 {
-                    texto:  "Seria interessante explorar primeiramente fontes renováveis exotérmicas, em segundo plano utilizar a energia geotérmica apesar dos custos elevados de explorações e possibilidades de contaminação de rios. ",
-                    afirmacao: "Você é uma pessoa que dá ênfase em priorizar os recursos disponíveis, pensando no meio ambiente e sem descartar o viés econômico."
+                    texto:  "Melhorar o atendimento nos postos de saúde e hospitais, diminuindo as filas e garantindo consultas, exames e medicamentos para quem precisa, principalmente para os idosos.",
+                    afirmacao: "Pessoa idosa"
                 }    
                
             ]
         },
         {
-            enunciado: "Hoje em dia é cada vez mais importante conhecer o seu corpo, suas qualidades, suas limitações e entender suas emoções. Saber controlá-las é o desafio das pessoas. A sua auto-estima impacta a sua qualidade de vida?",
+            enunciado: "Na sua opinião, qual é o maior problema da saúde pública atualmente?",
 
             alternativas: [
                 {
-                    texto: "Na maior parte do tempo, com certeza impacta, pois é a partir da autoestima que temos um olhar positivo ou negativo sobre nossas ações diárias. Sempre estou em busca de mais autoconhecimento.",
-                    afirmacao: "Você tem consciência que é importante ter uma boa auto-estima e procura se aprofundar mais sobre o assunto, vendo a vida de um jeito positivo."
+                    texto: "Para mim, o principal problema é a demora para conseguir consultas e exames. Como mãe, preciso de um atendimento rápido quando meus filhos ficam doentes.",
+                    afirmacao: "Mãe de família"
                 },
                 {
-                    texto:    "Apenas ocasionalmente ou raramente. Às vezes minha autoestima oscila e isso pode afetar negativamente minha qualidade de vida em certas ocasiões.",
+                    texto:    "Na minha visão, o maior problema é a falta de profissionais e de recursos nos serviços públicos. Isso aumenta a sobrecarga dos trabalhadores e prejudica a qualidade do atendimento.",
                
-                    afirmacao: "Você demomostra que precisa se conhecer mais e mostra uma consciência de uma crescente necessidade de cuidar mais da própria percepção e bem-estar emocional."
+                    afirmacao: "Profissional da saúde"
                 }    
                
             ]
