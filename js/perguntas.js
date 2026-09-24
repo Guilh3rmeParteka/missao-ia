@@ -1,4 +1,4 @@
-const perguntas = [
+export const perguntas = [
     {
         enunciado: "Qual medida você considera mais importante para melhorar a saúde pública da sua comunidade?",
         alternativas: [
