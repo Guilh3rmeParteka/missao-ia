@@ -11,7 +11,6 @@ let atual = 0;
 let historiaFinal = "";
 
 function mostraPergunta() {
-
   caixaResultado.style.display = "none";
 
   if (atual >= perguntas.length) {
@@ -26,7 +25,6 @@ function mostraPergunta() {
   caixaAlternativas.innerHTML = "";
 
   perguntaAtual.alternativas.forEach((alternativa) => {
-
     const botao = document.createElement("button");
 
     botao.textContent = alternativa.texto;
@@ -36,12 +34,10 @@ function mostraPergunta() {
     });
 
     caixaAlternativas.appendChild(botao);
-
   });
 }
 
 function respostaSelecionada(alternativa) {
-
   const afirmacao = aleatorio(alternativa.afirmacao);
 
   historiaFinal += afirmacao + " ";
@@ -52,7 +48,6 @@ function respostaSelecionada(alternativa) {
 }
 
 function mostraResultado() {
-
   caixaPerguntas.textContent =
     "Olha só o que podemos afirmar sobre você...";
 
@@ -64,13 +59,10 @@ function mostraResultado() {
 }
 
 botaoJogarNovamente.addEventListener("click", () => {
-
   atual = 0;
-
   historiaFinal = "";
 
   mostraPergunta();
-
 });
 
 mostraPergunta();
