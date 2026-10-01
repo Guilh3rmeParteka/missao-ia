@@ -1,5 +1,5 @@
-import { aleatorio } from './aleatorio.js';
-import { perguntas } from './perguntas.js';
+import { aleatorio } from "./aleatorio.js";
+import { perguntas } from "./perguntas.js";
 
 const caixaPerguntas = document.querySelector(".caixa-perguntas");
 const caixaAlternativas = document.querySelector(".caixa-alternativas");
@@ -8,41 +8,43 @@ const textoResultado = document.querySelector(".texto-resultado");
 const botaoJogarNovamente = document.querySelector(".novamente-btn");
 
 let atual = 0;
-let perguntaAtual;
 let historiaFinal = "";
 
 function mostraPergunta() {
+
+  caixaResultado.style.display = "none";
+
   if (atual >= perguntas.length) {
     mostraResultado();
     return;
   }
 
-  perguntaAtual = perguntas[atual];
+  const perguntaAtual = perguntas[atual];
 
   caixaPerguntas.textContent = perguntaAtual.enunciado;
-  caixaAlternativas.textContent = "";
 
-  mostraAlternativas();
-}
+  caixaAlternativas.innerHTML = "";
 
-function mostraAlternativas() {
-  for (const alternativa of perguntaAtual.alternativas) {
-    const botaoAlternativas = document.createElement("button");
+  perguntaAtual.alternativas.forEach((alternativa) => {
 
-    botaoAlternativas.textContent = alternativa.texto;
+    const botao = document.createElement("button");
 
-    botaoAlternativas.addEventListener("click", () => {
+    botao.textContent = alternativa.texto;
+
+    botao.addEventListener("click", () => {
       respostaSelecionada(alternativa);
     });
 
-    caixaAlternativas.appendChild(botaoAlternativas);
-  }
+    caixaAlternativas.appendChild(botao);
+
+  });
 }
 
-function respostaSelecionada(opcaoSelecionada) {
-  const afirmacoes = aleatorio(opcaoSelecionada.afirmacao);
+function respostaSelecionada(alternativa) {
 
-  historiaFinal += afirmacoes + " ";
+  const afirmacao = aleatorio(alternativa.afirmacao);
+
+  historiaFinal += afirmacao + " ";
 
   atual++;
 
@@ -50,23 +52,25 @@ function respostaSelecionada(opcaoSelecionada) {
 }
 
 function mostraResultado() {
+
   caixaPerguntas.textContent =
     "Olha só o que podemos afirmar sobre você...";
 
-  textoResultado.textContent = historiaFinal;
+  caixaAlternativas.innerHTML = "";
 
-  caixaAlternativas.textContent = "";
+  textoResultado.textContent = historiaFinal;
 
   caixaResultado.style.display = "block";
 }
 
 botaoJogarNovamente.addEventListener("click", () => {
+
   atual = 0;
+
   historiaFinal = "";
 
-  caixaResultado.style.display = "none";
-
   mostraPergunta();
+
 });
 
 mostraPergunta();

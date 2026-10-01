@@ -6,6 +6,10 @@
   --cor-texto: #D7F9FF;
 }
 
+* {
+  box-sizing: border-box;
+}
+
 body {
   background-color: var(--cor-fundo);
   color: var(--cor-texto);
@@ -20,9 +24,9 @@ body {
 .caixa-principal {
   background-color: var(--cor-principal);
   width: 90%;
-  max-width: 700px;
+  max-width: 800px;
   text-align: center;
-  padding: 20px;
+  padding: 30px;
   border-radius: 15px;
 }
 
@@ -33,34 +37,47 @@ h1 {
 .caixa-perguntas {
   margin: 30px 0;
   font-size: 20px;
+  line-height: 1.5;
 }
 
 .caixa-alternativas {
   display: flex;
   flex-direction: column;
-  gap: 10px;
+  gap: 15px;
 }
 
-button {
+.caixa-alternativas button {
   background-color: var(--cor-principal);
   color: var(--cor-destaque);
   border: 2px solid var(--cor-destaque);
   border-radius: 15px;
   padding: 15px;
   cursor: pointer;
-  transition: background-color 0.3s, color 0.3s;
+  font-size: 16px;
+  transition: 0.3s;
 }
 
-button:hover {
+.caixa-alternativas button:hover {
   background-color: var(--cor-destaque);
   color: var(--cor-secundaria);
 }
 
 .caixa-resultado {
   display: none;
-  margin-top: 20px;
+  margin-top: 30px;
 }
 
 .texto-resultado {
   line-height: 1.6;
+  font-size: 18px;
+}
+
+.novamente-btn {
+  background-color: var(--cor-destaque);
+  color: var(--cor-secundaria);
+  border: none;
+  border-radius: 15px;
+  padding: 15px 25px;
+  cursor: pointer;
+  font-size: 16px;
 }
