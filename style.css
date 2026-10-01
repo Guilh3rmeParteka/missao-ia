@@ -20,6 +20,9 @@
   margin: 0;
   padding: 0;
 }
+h1, .caixa-perguntas, .caixa-resultado{
+    font-family: 'Chakra Petch', sans-serif;
+}
 
 body {
   min-height: 100vh;
