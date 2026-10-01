@@ -56,6 +56,8 @@ function mostraResultado() {
   textoResultado.textContent = historiaFinal;
 
   caixaResultado.style.display = "block";
+  caixaResultado.classList.add("mostrar");
+  botaoJogarNovamente.addEventListener("click", jogaNovamente());
 }
 
 botaoJogarNovamente.addEventListener("click", () => {
